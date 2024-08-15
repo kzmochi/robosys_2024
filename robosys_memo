@@ -138,4 +138,27 @@ git switch -c dev
 main
 すべてのファイルをaddするオプション
 git add -A
+めちゃ有能なのは、中間生成物のごみのままadd -Aしてしまっても
+保存後もういちどadd -Aすると中間生成物は除外してリスト化してくれる
+そのままpushしようとするとpush先がわからないと怒られる
+git push --set-upstream origin dev
+として明確にpush先をしていしてあげる.2回目からは指定なしでdevにpushする。
+devのコミット情報をmain へ「マージ」する
+git switch main --> まずはmainへ戻る
+
+
+コミットグラフ
+git log --graph
+各コミットに「コミットハッシュ値」がついている
+{ }の中にブランチ名
+
+
+
+
+
+
+
+
+
+
 
