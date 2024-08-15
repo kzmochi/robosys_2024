@@ -4,7 +4,9 @@ import sys
 totalVal=0
 
 for val in sys.stdin:
-    val = float(val)
-    totalVal += val
-    
-print(f"Total is {totalVal}")
+    try:
+        totalVal += int(val)
+    except:
+        totalVal += float(val)
+
+print(f"Total is [{totalVal}], "+f"{type(totalVal)}")

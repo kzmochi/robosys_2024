@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+
+lAFword = ["apple "
+        , "banana "
+        , "cherry "
+        , "door "
+        , "ear "
+        , "fork "]
+
+for iOdd, oddAFword in enumerate( lAFword[0::2] ):
+    print(f"A-F odd word: {oddAFword}")
+
+for iEven, evenAFword in enumerate( lAFword[1::2] ):
+    print(f"A-F even word: {evenAFword}")
+
