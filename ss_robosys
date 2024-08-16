@@ -1,0 +1,28 @@
+#!/bin/bash
+
+addPath=$HOME/robosys_2024
+echo find adding path: $addPath
+
+ret=2    # 2 -- init
+# F1:pathを通す
+if [ -d $addPath ]; then
+	export PATH=$PATH:$addPath
+	echo successed setting
+	ret=0    # 0 -- normal
+else
+	echo failed setting
+	ret=1    # 1 -- fail
+	exit $ret
+fi
+
+# F2:オプション「-r」でPATHの表示
+options() {
+	if [ ${1} = "-r" ]; then
+		echo $PATH
+	else
+		echo option -r : display path
+	fi
+}
+[ -z ${1} ] || options ${1}
+
+exit $ret
