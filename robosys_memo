@@ -212,6 +212,36 @@ GNU General Public license/BSD license/MIT license/Apache license ...etc
 オープンソースライセンスの日本語参考訳
 https://licenses.opensource.jp/
 
+リポジトリへのライセンス設定
+・GPL 3.0
+curl https://www.gnu.org/licenses/gpl-3.0.txt > COPYING
+・BDS 3-clause
+vim LICENSE --> 下記URLのCopyrightから下をコピーして貼り付け
+https://opensource.org/license/bsd-3-clause
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ロボットシステム学　第６回
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+コマンドの正常終了・異常終了
+・コマンドは人だけでなくシェルにエラーの有無を伝達
+「終了ステータス」と呼ばれる整数値
+$?
+0 正常終了
+1 軽微な問題
+2 重大な問題
+
+シェルの変数
+${変数}で値に置換
+
+コマンドの出力を変数に閉じ込める
+変数名=$(コマンド)
+A=$(ls)
+
+テストコマンド
+１．test 文字列A = 文字列B
+２．[ 文字列A = 文字列B ]
+３．[[ 文字列A = 文字列B ]]
 
 
 
