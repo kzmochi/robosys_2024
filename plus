@@ -12,4 +12,4 @@ for val in sys.stdin:
     except:
         totalVal += float(val)
 
-print(f"Total is [{totalVal}], "+f"{type(totalVal)}")
+print(f"{totalVal}")
