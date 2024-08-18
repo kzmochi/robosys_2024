@@ -326,10 +326,16 @@ jobs:                   #走らせたい処理(ジョブ)のリスト
   test:                         #testというジョブを作る
     runs-on: ubuntu-latest      #runs-on: どの環境で動作させるか
     steps:                              #手続きの記述
-    - uses: actions/chekout@v3          #uses: 
+    - uses: actions/checkout@v3         #uses: リポジトリのクローン先(path無し)
     - name: All test                    #name: ジョブの名前
       run: bash -x ./test.bash                  #シェアルスクリプトの実行
 
+Github robosys_2024 リポジトリ
+コミットの横に● が出現する,左クリックでdetailを選択
+
+緑・・・success
+黄・・・pemding
+バツ・・・failure
 
 
 
