@@ -317,7 +317,7 @@ GitHub Actions
 ・GitHubのCI/CDサービス
 ・テストのはじめ方
 mkdir --p .github/workflows
-workflowsのなかに.ymlのファイルを作成
+workflowsのなかに.ymlのファイルを作成。ヤムルと読む。
 touch xxx.yml
 
 name: test              #name: ワークフローの名前
@@ -338,6 +338,23 @@ Github robosys_2024 リポジトリ
 バツ・・・failure
 
 
+READMEの整備
+ソフトを使ってもらうときに最初に読んでもらうドキュメント
+README.md
+.md マークダウンという形式
+
+READMEに書くこと
+ユーザーが困らないように
+・何をするためのソフトか
+・使い方
+  > ダウンロード、インストール、起動手順、簡単な例やチュートリアル
+・どのような環境で使えるか
+  > OS/Python verstion/他に必要なソフトやライブラリ
+・テストの結果
+・権利関係/謝辞
+  > 著作権、ライセンス
+  > 手伝ってくれた人のリストと手伝いの中身
+・その他必要なこと
 
 
 
