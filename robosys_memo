@@ -290,6 +290,55 @@ exit ret --> 異常検出の関数内でret=1を立ててあげる
 ./test.bash 2> /dev/null
 
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ロボットシステム学　第７回
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+GitHub Action
+様々な環境に対応する必要がある
+    > Python バージョン
+    > Linux, Windows
+ちゃんとテストしていると示したい
+
+Circle CI
+Travis CI
+1. GitHub等にpushされたコードをテスト
+    > GitHub等のページに結果が表示される
+2. テストが通ったら次のアクションに
+
+改めてテストの役割
+抜け目のないテストにより
+・デバッグやリリースの際の手間の削減が可能
+・「動いているシステムは怖くていじられない」
+「継続的インテグレーション(CI)」「継続的デリバリー(CD)」「継続的デプロイ」
+CI/CDサービス
+★ 「自動」でテストできることがキモ
+
+GitHub Actions
+・GitHubのCI/CDサービス
+・テストのはじめ方
+mkdir --p .github/workflows
+workflowsのなかに.ymlのファイルを作成
+touch xxx.yml
+
+name: test              #name: ワークフローの名前
+on: push                #on: いつこのワークフローを走らせるか
+jobs:                   #走らせたい処理(ジョブ)のリスト
+  test:                         #testというジョブを作る
+    runs-on: ubuntu-latest      #runs-on: どの環境で動作させるか
+    steps:                              #手続きの記述
+    - uses: actions/chekout@v3          #uses: 
+    - name: All test                    #name: ジョブの名前
+      run: bash -x ./test.bash                  #シェアルスクリプトの実行
+
+
+
+
+
+
+
+
+
+
 
 
 
